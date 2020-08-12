@@ -1,0 +1,23 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: My Demo SSMRT
+  thymeleaf:
+    cache: false
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+#    timeout: 1000
+    jedis:
+      pool:
+        max-active: 8
+#        max-wait: -1
+        max-idle: 8
+  datasource:
+    url: jdbc:mysql://localhost:3306/smbms?autoReconnect=true&useSSL=false&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
